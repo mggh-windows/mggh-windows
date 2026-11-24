@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马哥有限集团</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background: #222;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #ff9900;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 32px;
+        }
+        nav {
+            background: #1b1b1b;
+            text-align: center;
+            padding: 12px;
+        }
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #ff9900;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .box {
+            background: #222;
+            padding: 24px;
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+        .box h2 {
+            color: #ff9900;
+            margin-bottom:16px;
+            border-left:4px solid #ff9900;
+            padding-left:10px;
+        }
+        .download-btn {
+            background: #ff9900;
+            color: #000;
+            border: none;
+            padding:12px 26px;
+            font-size:18px;
+            border-radius:6px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+        .download-btn:hover {
+            background:#ffb84d;
+        }
+
+        /* 推荐网站：每排4个，共3行 */
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .site-card {
+            display: block;
+            background: #2c2c2c;
+            border: 1px solid #3a3a3a;
+            border-radius: 8px;
+            padding: 14px 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+        .site-card:hover {
+            border-color: #ff9900;
+            background: #383838;
+            transform: translateY(-2px);
+        }
+        .site-card .site-name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #ff9900;
+            margin-bottom: 4px;
+        }
+        .site-card .site-desc {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        footer {
+            text-align:center;
+            padding:20px;
+            color:#888;
+            margin-top:40px;
+        }
+
+        @media (max-width: 640px) {
+            .site-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>马哥工会</h1>
+        <p>杀掉厂家｜干掉限制｜马哥工会｜一键抵达</p>
+    </header>
+    <nav>
+        <a href="#intro">·工会介绍·</a>
+        <a href="#notice">·公告·</a>
+        <a href="#download">·资源下载·</a>
+        <a href="#sites">·网页抵达·</a>
+        <a href="#contact">·联系我们·</a>
+    </nav>
+    <div class="container">
+        <div class="box" id="intro">
+            <h2>工会介绍</h2>
+            <p>欢迎来到马哥工会！我们是一个友好的游戏和资源工会，主打一起游戏、交流、分享资源。
+            欢迎各位小伙伴加入，遵守工会规则，和睦相处，否则会死。</p>
+        </div>
+        <div class="box" id="notice">
+            <h2>最新公告</h2>
+            <p>✅ 马哥工会长希望大家积极参与！</p>
+            <p>✅ 资源持续更新，有问题请反馈</p>
+        </div>
+        <div class="box" id="download">
+            <h2>资源下载</h2>
+            <p>点击按钮下载安装包</p>
+            <br>
+            <button class="download-btn" onclick="downloadFile()">点击下载安装包</button>
+        </div>
+        <div class="box" id="sites">
+            <h2>网页抵达</h2>
+            <p>点击卡片一键前往对应网站</p>
+            <br>
+            <div class="site-grid">
+                <!-- 第1行 -->
+                <a class="site-card" href="https://www.baidu.com" target="_blank">
+                    <div class="site-name">百度</div>
+                    <div class="site-desc">搜索引擎</div>
+                </a>
+                <a class="site-card" href="https://www.bilibili.com" target="_blank">
+                    <div class="site-name">哔哩哔哩</div>
+                    <div class="site-desc">视频社区</div>
+                </a>
+                <a class="site-card" href="https://www.zhihu.com" target="_blank">
+                    <div class="site-name">知乎</div>
+                    <div class="site-desc">问答社区</div>
+                </a>
+                <a class="site-card" href="https://www.taobao.com" target="_blank">
+                    <div class="site-name">淘宝</div>
+                    <div class="site-desc">购物平台</div>
+                </a>
+
+                <!-- 第2行 -->
+                <a class="site-card" href="https://www.qq.com" target="_blank">
+                    <div class="site-name">腾讯QQ</div>
+                    <div class="site-desc">在线聊天</div>
+                </a>
+                <a class="site-card" href="https://www.weixin.qq.com" target="_blank">
+                    <div class="site-name">微信</div>
+                    <div class="site-desc">社交软件</div>
+                </a>
+                <a class="site-card" href="https://github.com" target="_blank">
+                    <div class="site-name">GitHub</div>
+                    <div class="site-desc">代码托管</div>
+                </a>
+                <a class="site-card" href="https://www.minecraft.net" target="_blank">
+                    <div class="site-name">MC官网</div>
+                    <div class="site-desc">我的世界</div>
+                </a>
+
+                <!-- 第3行 -->
+                <a class="site-card" href="https://www.7k7k.com" target="_blank">
+                    <div class="site-name">7k7k</div>
+                    <div class="site-desc">小游戏</div>
+                </a>
+                <a class="site-card" href="https://www.4399.com" target="_blank">
+                    <div class="site-name">4399</div>
+                    <div class="site-desc">小游戏</div>
+                </a>
+                <a class="site-card" href="https://pan.baidu.com" target="_blank">
+                    <div class="site-name">百度网盘</div>
+                    <div class="site-desc">云存储</div>
+                </a>
+                <a class="site-card" href="https://www.douyin.com" target="_blank">
+                    <div class="site-name">抖音</div>
+                    <div class="site-desc">短视频</div>
+                </a>
+            </div>
+        </div>
+        <div class="box" id="contact">
+            <h2>联系我们</h2>
+            <p>BiliBili 马哥工业</p>
+            <p>负责人：马哥</p>
+        </div>
+    </div>
+    <footer>
+        © 2026 马哥工会X马哥工业 纸上繁星版权所有
+    </footer>
+
+<script>
+function downloadFile(){
+  const a = document.createElement('a');
+  // 这里改成你的zip文件名，和html放在同一个文件夹
+  a.href = "./请解压后使用ANDROID安装包.zip";
+  a.download = "请解压后使用ANDROID安装包.zip";
+  a.click();
+}
+</script>
+</body>
+</html>
